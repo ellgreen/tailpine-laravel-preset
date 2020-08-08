@@ -1,0 +1,30 @@
+{
+    "name": "ellgreen/tailpine-laravel-preset",
+    "description": "Tailwind CSS and Alpine.js Laravel UI Preset",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ellis Green",
+            "email": "devellisper@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EllGreen\\TailpineLaravelPreset\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "laravel/ui": "^2.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EllGreen\\TailpineLaravelPreset\\TailpinePresetServiceProvider"
+            ]
+        }
+    }
+}
