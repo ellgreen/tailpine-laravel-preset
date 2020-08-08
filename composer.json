@@ -2,7 +2,7 @@
     "name": "ellgreen/tailpine-laravel-preset",
     "description": "Tailwind CSS and Alpine.js Laravel UI Preset",
     "type": "library",
-    "licence": "MIT",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ellis Green",
