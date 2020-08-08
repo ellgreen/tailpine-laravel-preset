@@ -7,8 +7,17 @@ Lightweight laravel frontend preset for [Tailwind CSS](https://tailwindcss.com) 
 ```bash
 composer require --dev ellgreen/tailpine-laravel-preset
 ```
+
 Once that has installed, you can run the following command to install the preset:
 
 ```bash
 php artisan ui tailpine
+```
+
+After that the assets will need to be updated like so:
+
+```
+npm install
+
+npm run dev
 ```

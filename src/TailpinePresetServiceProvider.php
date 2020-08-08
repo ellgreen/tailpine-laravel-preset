@@ -15,6 +15,7 @@ class TailpinePresetServiceProvider extends ServiceProvider
             $tailpine->install();
 
             $command->info('Tailpine frontend preset has installed successfully!');
+            $command->comment('You will now need to run `npm install` and `npm run dev`');
         });
     }
 }
