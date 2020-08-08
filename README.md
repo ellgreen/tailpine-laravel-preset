@@ -14,10 +14,16 @@ Once that has installed, you can run the following command to install the preset
 php artisan ui tailpine
 ```
 
-After that the assets will need to be updated like so:
+After that, the assets will need to be updated like so:
 
 ```
 npm install
 
 npm run dev
+```
+
+Optionally, after install, you can remove the dependency as it's not needed anymore:
+
+```bash
+composer remove --dev ellgreen/tailpine-laravel-preset
 ```
