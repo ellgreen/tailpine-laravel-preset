@@ -59,7 +59,15 @@ class TailpinePreset extends Preset
     protected static function copyStub(string $stub, ?string $dest = null): void
     {
         $stubPath = Str::finish(static::STUBS_PATH, '/') . $stub;
+        $destPath = $dest ?? base_path($stub);
+        $destDir = dirname($destPath);
 
-        copy($stubPath, $dest ?? base_path($stub));
+        tap(new Filesystem, function (Filesystem $filesystem) use ($destDir) {
+            if (! $filesystem->isDirectory($directory = $destDir)) {
+                $filesystem->makeDirectory($directory, 0755, true);
+            }
+        });
+
+        copy($stubPath, $destPath);
     }
 }
