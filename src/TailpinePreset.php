@@ -15,18 +15,17 @@ class TailpinePreset extends Preset
     {
         static::updatePackages();
         static::copyStubs();
-
         static::removeNodeModules();
     }
 
     protected static function updatePackageArray(array $packages)
     {
         return array_merge([
-            'alpinejs' => '^2.5',
+            'alpinejs' => '^2.6',
             'axios'=> '^0.19',
             'laravel-mix'=> '^5.0.1',
             'lodash' => '^4.17',
-            'tailwindcss'=> '^1.6',
+            'tailwindcss'=> '^1.7',
             '@tailwindcss/custom-forms'=> '^0.2',
         ], Arr::except($packages, [
             'sass',
@@ -48,6 +47,7 @@ class TailpinePreset extends Preset
         static::copyStub('tailwind.config.js');
         static::copyStub('resources/js/bootstrap.js');
         static::copyStub('resources/css/app.css');
+        static::copyStub('resources/views/components/layout/app.blade.php');
         static::copyStub('resources/views/welcome.blade.php');
     }
 
